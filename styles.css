@@ -24,11 +24,12 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding-top: 12px;
 }
 
 .color-banner {
     display: flex;
-    height: 8px;
+    height: 24px;
 }
 
 .color-block {
@@ -84,8 +85,9 @@ header {
 }
 
 .logo h1 {
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: bold;
     margin-bottom: 0;
 }
 
@@ -105,6 +107,7 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 400;
+    font-size: 1.2rem;
     transition: opacity 0.3s ease;
 }
 
