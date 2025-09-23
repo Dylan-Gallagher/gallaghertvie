@@ -211,6 +211,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Channel carousel is now handled by pure CSS animations
+    // The carousel automatically scrolls smoothly using CSS keyframes
+    // Hover to pause functionality is built into the CSS
+
     // Lazy loading for future images
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
