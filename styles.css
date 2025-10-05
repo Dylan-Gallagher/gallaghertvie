@@ -142,6 +142,19 @@ nav a:hover {
     opacity: 0.9;
 }
 
+.hero-services {
+    list-style: disc;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    padding-left: 1.5rem;
+}
+
+.hero-services li {
+    margin-bottom: 0.5rem;
+}
+
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -181,7 +194,26 @@ nav a:hover {
 }
 
 .hero-image {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    flex-shrink: 0;
+}
+
+.hero-image img:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 .tv-icon {
@@ -192,7 +224,7 @@ nav a:hover {
 /* Services section */
 .services {
     padding: 4rem 0;
-    background: #f8f9fa;
+    background-color: #f1f5f9;
 }
 
 .services h2 {
@@ -338,7 +370,7 @@ nav a:hover {
 /* About section */
 .about {
     padding: 4rem 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .about-content {
@@ -376,7 +408,7 @@ nav a:hover {
 }
 
 .service-areas {
-    background: #f8f9fa;
+    background: white;
     padding: 2rem;
     border-radius: 10px;
 }
@@ -387,8 +419,8 @@ nav a:hover {
 }
 
 .areas-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -396,6 +428,16 @@ nav a:hover {
     padding: 0.3rem 0;
     font-size: 0.9rem;
     color: #555;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.areas-grid span:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0B7EC8;
+    font-weight: bold;
 }
 
 /* Contact section */
@@ -419,7 +461,8 @@ nav a:hover {
 
 .contact-info {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
 .contact-item h4 {
@@ -519,6 +562,12 @@ footer {
         text-align: center;
     }
     
+    .hero-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+    
     .hero-content h2 {
         font-size: 2rem;
     }
@@ -537,6 +586,11 @@ footer {
     
     .contact-content {
         grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .footer-content {
